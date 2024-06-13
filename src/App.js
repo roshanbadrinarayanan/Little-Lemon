@@ -1,21 +1,28 @@
 import './App.css';
-import Header from './Header';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './HomePage';
 import Nav from './Nav';
-import Main from './Main';
-import Footer from './Footer';
-import logo from "./logo.jpg"
 import "./style.css"
+//import "./styles.css"
 
-function App() {
-  return (
-    <>
-      <img src={logo} alt='logo' />
-      <Header />
-      <Nav />
-      <Main />
-      <Footer />
-    </>
-  );
+
+function App(){
+  return(
+    <Router>
+      <>
+        <Nav />
+        <Routes>
+          <Route path='' element={<HomePage />} />
+        
+        </Routes>
+      </>
+    </Router>
+  )
 }
+/*function App(){
+  return(
+    <h1>Hello</h1>
+  )
+}*/
 
 export default App;
