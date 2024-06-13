@@ -1,15 +1,15 @@
 import React from "react";
-import main from "./main.jpg"
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import main from "./main.jpg";
 
-function Calltoaction(){
+function Calltoaction() {
+    const navigate = useNavigate();
 
     const Submit = () => {
-        //e.preventDefault();
-        <Link to="/booking" />
+        navigate("/booking");
     }
 
-    return(
+    return (
         <section className="calltoaction">
             <div className="notimg">
                 <h1 id="little">Little Lemon</h1>
