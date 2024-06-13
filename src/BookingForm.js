@@ -1,5 +1,4 @@
-import { useState } from "react";
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 
@@ -9,18 +8,17 @@ function Bookingform({ availableTimes, dispatch }) {
     const [guests, setGuests] = useState(1);
     const [occasion, setOccasion] = useState("");
     const [errors, setErrors] = useState({});
+    const today = new Date().toISOString().split('T')[0];
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const formErrors = validateForm();
         if (Object.keys(formErrors).length === 0) {
-            // All fields are valid, navigate to confirmation page
             navigate("/confirmed");
         } else {
             setErrors(formErrors);
         }
     };
-    
 
     const handleDateChange = (e) => {
         setDate(e.target.value);
@@ -47,17 +45,18 @@ function Bookingform({ availableTimes, dispatch }) {
     };
 
     return (
-        <form onSubmit={handleSubmit} style={{ display: 'grid', maxWidth: '200px', gap: '20px' }}>
-            <label htmlFor="date">Choose Date</label>
+        <form onSubmit={handleSubmit} className="form-container">
+            <label htmlFor="date" id="date1">Choose Date</label>
             <input
                 type="date"
                 id="date"
                 value={date}
                 onChange={handleDateChange}
                 required
-                aria-label="dd/mm/yyyy"
+                min={today}
+                //aria-label="dd/mm/yyyy"
             />
-            {errors.date && <span style={{ color: 'red' }}>{errors.date}</span>}
+            {errors.date && <span>{errors.date}</span>}
 
             <label htmlFor="time">Choose Time</label>
             <select
@@ -72,7 +71,7 @@ function Bookingform({ availableTimes, dispatch }) {
                     <option key={timeOption} value={timeOption}>{timeOption}</option>
                 ))}
             </select>
-            {errors.time && <span style={{ color: 'red' }}>{errors.time}</span>}
+            {errors.time && <span>{errors.time}</span>}
 
             <label htmlFor="guests">Number of People</label>
             <input
@@ -84,7 +83,7 @@ function Bookingform({ availableTimes, dispatch }) {
                 onChange={handleGuestsChange}
                 required
             />
-            {errors.guests && <span style={{ color: 'red' }}>{errors.guests}</span>}
+            {errors.guests && <span>{errors.guests}</span>}
 
             <label htmlFor="occasion">Occasion</label>
             <select
@@ -100,7 +99,7 @@ function Bookingform({ availableTimes, dispatch }) {
                 <option value="engagement">Engagement</option>
                 <option value="others">Others (Please Specify)</option>
             </select>
-            {errors.occasion && <span style={{ color: 'red' }}>{errors.occasion}</span>}
+            {errors.occasion && <span>{errors.occasion}</span>}
 
             <input type="submit" value="Make your reservation" disabled={Object.keys(errors).length > 0} />
         </form>

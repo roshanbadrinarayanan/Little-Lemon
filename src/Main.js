@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Nav from './Nav';
 import HomePage from './HomePage';
 import ConfirmedBooking from './ConfirmedBooking';
+import Menu from './Menu';
+import About from './About';
 
 
 const initializeTimes = () => {
@@ -30,6 +32,8 @@ function Main() {
         <Route path="/" element={<HomePage />} />
         <Route path="/booking" element={<BookingPage availableTimes={availableTimes} dispatch={dispatch} />} />
         <Route path='/confirmed' element={<ConfirmedBooking />} />
+        <Route path='/menu' element={<Menu />} />
+        <Route path='/about' element={<About />} />
       </Routes>
     </Router>
   );

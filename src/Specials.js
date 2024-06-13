@@ -2,6 +2,7 @@ import React from "react";
 import salad from "./salad.jpg"
 import lemon from "./lemondessert.jpg"
 import brus from "./bruschetta.jpg"
+import { useNavigate } from "react-router-dom";
 
 
 function Specials(){
@@ -10,11 +11,18 @@ function Specials(){
                         {title: "Lemon Cake", description: "This comes straight from my grandma's cookbook. Made from sour lemons and the thickest cream, this sweet and savoury dessert will have you craving for more", img:lemon}
     ]
 
+    const navigate = useNavigate();
+
+    const Submit = (e) => {
+        e.preventDefault()
+        navigate('/menu')
+    }
+
     return(
         <section className="specials">
             <div className="top">
                 <h2>This week's Specials!</h2>
-                <button id="menu">Our Menu</button>
+                <button id="menu" onClick={Submit}>Our Menu</button>
             </div>
             <div className="specials-list">
                 {specials.map((special, index) => (
