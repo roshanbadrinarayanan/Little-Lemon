@@ -228,3 +228,36 @@ img{
     grid-column: 1/0;
     margin-left: 130px;
 }
+
+
+/*BOOKINGS*/
+
+/*form {
+  display: grid;
+  gap: 20px;
+  max-width: 200px;
+}*/
+
+label {
+  font-size: 1em;
+  color: #333;
+}
+
+input, select {
+  padding: 10px;
+  font-size: 1em;
+}
+
+input[type="submit"] {
+  background-color: #495e57;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#book{
+    text-align: center;
+}
+#cdate, #ctime, #cguests, #coccasion{
+    text-align: center;
+}

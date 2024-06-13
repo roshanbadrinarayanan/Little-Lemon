@@ -10,8 +10,8 @@ function HomePage(){
     <main>
         <Calltoaction /><br></br><br></br>
         <Specials /><br></br><br></br>
-        <CustomerSays />
-        <Chicago />
+        <CustomerSays /><br></br><br></br>
+        <Chicago /><br></br><br></br>
         <Footer />
     </main>)
 }
