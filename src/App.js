@@ -3,9 +3,11 @@ import Main from './Main';
 import "./App.css";
 import "./style.css"
 
+
 const App = () => {
+
   return (
-    <div>
+    <div className='App'>
       <Main />
     </div>
   );

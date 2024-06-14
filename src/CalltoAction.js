@@ -1,12 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import main from "./main.jpg";
+import restaurant from "./restaurant.jpg"
 
 function Calltoaction() {
     const navigate = useNavigate();
 
     const Submit = () => {
-        navigate("/booking");
+        navigate("/booking"); 
     }
 
     return (
@@ -18,7 +19,8 @@ function Calltoaction() {
                 <button id="button1" onClick={Submit}>Book a Table</button>
             </div>
             <div className="img">
-                <img src={main} alt="img" width={178} height={100}/>
+                <img src={main} alt="img" width={178} height={100} id="main"/>
+                <img src={restaurant} alt="rest" width={178} height={100} id="restaurant"/>
             </div>
         </section>
     )

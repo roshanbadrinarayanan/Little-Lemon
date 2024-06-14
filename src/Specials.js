@@ -18,7 +18,7 @@ function Specials(){
         navigate('/menu')
     }
 
-    return(
+    return( 
         <section className="specials">
             <div className="top">
                 <h2>This week's Specials!</h2>
