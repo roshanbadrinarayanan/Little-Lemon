@@ -1,13 +1,13 @@
 import React from "react";
-import hummus from "./hummus.jpeg";
-import dolmas from "./dolmas.jpeg";
-import falafel from "./falafel.jpeg";
-import kofta from "./kofta.jpeg";
-import mousakka from "./mousakka.jpeg";
-import skewer from "./skewer.jpeg";
-import spanak from "./spanak.jpeg";
-import shakshuka from "./shakshuka.jpeg";
-import baklava from "./baklava.jpeg";
+import hummus from "./images/hummus.jpeg";
+import dolmas from "./images/dolmas.jpeg";
+import falafel from "./images/falafel.jpeg";
+import kofta from "./images/kofta.jpeg";
+import mousakka from "./images/mousakka.jpeg";
+import skewer from "./images/skewer.jpeg";
+import spanak from "./images/spanak.jpeg";
+import shakshuka from "./images/shakshuka.jpeg";
+import baklava from "./images/baklava.jpeg";
 
 
 function Menu() {

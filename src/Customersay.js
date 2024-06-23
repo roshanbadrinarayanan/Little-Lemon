@@ -1,5 +1,5 @@
 import React from "react";
-import star from "./5star.png";
+import star from "./images/5star.png";
 
 function CustomerSays(){
     return(

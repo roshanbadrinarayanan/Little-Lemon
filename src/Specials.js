@@ -1,7 +1,7 @@
 import React from "react";
-import salad from "./salad.jpg"
-import lemon from "./lemondessert.jpg"
-import brus from "./bruschetta.jpg"
+import salad from "./images/salad.jpg"
+import lemon from "./images/lemondessert.jpg"
+import brus from "./images/bruschetta.jpg"
 import { useNavigate } from "react-router-dom";
 
 

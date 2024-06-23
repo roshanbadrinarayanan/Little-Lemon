@@ -7,6 +7,8 @@ import HomePage from './HomePage';
 import ConfirmedBooking from './ConfirmedBooking';
 import Menu from './Menu';
 import About from './About';
+import Login from './loginpage';
+import Signup from './Signup';
 
 
 const initializeTimes = () => {
@@ -34,6 +36,8 @@ function Main() {
         <Route path='/confirmed' element={<ConfirmedBooking />} />
         <Route path='/menu' element={<Menu />} />
         <Route path='/about' element={<About />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/signup' element={<Signup />} />
       </Routes>
     </Router>
   );
